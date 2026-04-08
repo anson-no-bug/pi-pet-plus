@@ -1,0 +1,48 @@
+{
+  "name": "@anson-no-bug/pi-pet-plus",
+  "version": "0.2.0",
+  "description": "A real-time pet companion for pi with progression, localization, and optional news delivery",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["pi-package", "pi", "pet", "extension", "news", "ascii"],
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "src",
+    "docs",
+    "README.md",
+    "README.zh.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "package.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anson-no-bug/pi-pet-plus.git"
+  },
+  "homepage": "https://github.com/anson-no-bug/pi-pet-plus#readme",
+  "bugs": {
+    "url": "https://github.com/anson-no-bug/pi-pet-plus/issues"
+  },
+  "pi": {
+    "extensions": ["./src/pet-core.ts", "./src/pet-news.ts"]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "@mariozechner/pi-tui": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "tsx": "^4.20.6",
+    "typescript": "^5.8.3"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.spec.ts",
+    "prepublishOnly": "npm run typecheck && npm test"
+  }
+}

@@ -191,10 +191,6 @@ npm test
 ## 相关文档
 
 - [English README](./README.md)
-- [pet-core 架构](docs/architecture/pet-core.md)
-- [pet-news 架构](docs/architecture/pet-news.md)
-- [locale 与 progression 示例](docs/examples/locale-and-progression.md)
-- [发布到 GitHub 和 npm](docs/publishing.md)
 
 ## License
 

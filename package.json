@@ -1,6 +1,6 @@
 {
   "name": "@anson-no-bug/pi-pet-plus",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A real-time pet companion for pi with progression, localization, and optional news delivery",
   "type": "module",
   "license": "MIT",
@@ -10,7 +10,6 @@
   },
   "files": [
     "src",
-    "docs",
     "README.md",
     "README.zh.md",
     "LICENSE",
@@ -36,13 +35,15 @@
     "@mariozechner/pi-tui": "*"
   },
   "devDependencies": {
+    "@mariozechner/pi-coding-agent": "*",
+    "@mariozechner/pi-tui": "*",
     "@types/node": "^22.15.3",
     "tsx": "^4.20.6",
     "typescript": "^5.8.3"
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test tests/*.spec.ts",
+    "test": "node ./node_modules/tsx/dist/cli.mjs --test tests/*.spec.ts",
     "prepublishOnly": "npm run typecheck && npm test"
   }
 }

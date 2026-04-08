@@ -191,10 +191,6 @@ npm test
 ## Docs
 
 - [Chinese README](./README.zh.md)
-- [pet-core architecture](docs/architecture/pet-core.md)
-- [pet-news architecture](docs/architecture/pet-news.md)
-- [locale + progression examples](docs/examples/locale-and-progression.md)
-- [publishing to GitHub and npm](docs/publishing.md)
 
 ## License
 

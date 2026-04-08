@@ -2,16 +2,9 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { access, readFile } from "node:fs/promises";
 
-const requiredFiles = [
-	"README.md",
-	"CONTRIBUTING.md",
-	"LICENSE",
-	"docs/architecture/pet-core.md",
-	"docs/architecture/pet-news.md",
-	"docs/examples/locale-and-progression.md",
-];
+const requiredFiles = ["README.md", "README.zh.md", "CONTRIBUTING.md", "LICENSE"];
 
-test("core open-source docs exist", async () => {
+test("core publishable docs exist", async () => {
 	await Promise.all(requiredFiles.map((file) => access(file)));
 });
 
